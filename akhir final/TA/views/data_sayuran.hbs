@@ -1,0 +1,30 @@
+{{> header}}
+{{> menuadmin}}
+<br/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<center><a href="/from_sayuran" type="button" class="btn btn-primary" ><i class="fas fa-plus"></i> add</a></center>
+{{#each results}}<hr><center>
+<div class="container">
+ <div class="col-sm">
+<div class="card text-white bg-success mb-3" style="max-width: 30rem;">
+  <img src="/assets/images/{{gambar}}"   class="img-thumbnail" alt="Forest" >
+  <div class="card-body">
+    <h5 class="card-title">{{nama}}</h5>
+    <p class="card-text">keterangan: {{keterangan}}</p>
+     <p class="card-text">Harga: {{harga}}</p>
+     <p class="card-text">status: {{status}}</p>
+    {{!-- <a href="https://api.whatsapp.com/send?phone=6283177278547" class="btn btn-primary"><i class="fas fa-cart-arrow-down"></i> PESAN</a></div> --}}
+	  <a href="/edit/{{id}}"type="button" class="btn btn-warning"><i class="fas fa-edit"></i> Edit</a href>
+	  <a href="/hapus/{{ id }}" type="button" class="btn btn-danger" onclick="return confirm('Ciussss????')"><i class="fas fa-trash-alt"></i> Hapus</a>  
+  	
+	
+  </div>
+</div>
+</div>
+</div></center></hr>
+
+{{/each}}     
+{{> footer}}
+
+
